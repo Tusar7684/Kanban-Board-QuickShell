@@ -1,0 +1,36 @@
+.user-page {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    grid-gap: 20px;
+
+    padding-left: 5px;
+
+}
+
+.user-section {
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    /* Add some shadow for better visibility */
+}
+
+.no-users {
+    grid-column: span 5;
+    /* Center the message if there are no users */
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+}
+
+.data {
+    width: 100%;
+    /* Ensure full width is used */
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+}

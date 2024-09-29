@@ -1,0 +1,97 @@
+.navbar {
+    /* width: 100vw; */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+}
+
+.dropdown {
+    position: relative;
+    /* Ensure dropdown list positions correctly */
+    width: auto;
+}
+
+.dropdown-button {
+    border: 1px solid #555;
+    background-color: white;
+    border-radius: 5px;
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.dropdown-button img {
+    width: 16px;
+    height: 16px;
+}
+
+.dropdown-button .display {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.options {
+    display: block;
+    position: absolute;
+    top: 100%;
+    /* Position right below the dropdown button */
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    list-style: none;
+    margin: 5px 0 0;
+    padding: 0;
+    width: 150px;
+    z-index: 10;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Add slight shadow */
+    font-size: 14px;
+    animation: fadeIn 0.3s ease;
+    /* Smooth fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.options .option {
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s ease;
+}
+
+.options .option:hover {
+    background-color: #f0f0f0;
+}
+
+.options .option.active {
+    background-color: #e0e0e0;
+    font-weight: bold;
+}
+
+.dropdown-icon {
+    transition: transform 0.2s ease;
+}
+
+.dropdown-icon.open {
+    transform: rotate(180deg);
+    /* Rotate arrow when dropdown is open */
+}

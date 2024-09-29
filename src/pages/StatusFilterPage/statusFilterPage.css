@@ -1,0 +1,24 @@
+.status-page {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(250px, 1fr));
+    /* Responsive grid layout */
+    grid-gap: 20px;
+    /* Space between grid items */
+    /* padding: 0 60px; */
+    padding-left: 20px;
+    margin-top: 20px;
+    background-color: #f2f2f2;
+
+}
+
+.back-log-list,
+.todo-list,
+.in-progress-list,
+.done-list,
+.cancelled-list {
+    /* Full width inside the grid column */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* Subtle shadow */
+}

@@ -1,0 +1,20 @@
+
+.priority-page {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(200px, 1fr));
+    grid-gap: 20px;
+
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.high-priority-list,
+.low-priority-list,
+.mid-priority-list,
+.urgent-priority-list,
+.in-progress-priority-list,
+.no-priority-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
